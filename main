@@ -1,3 +1,17 @@
-what up my dude
-hcgghh
-hey man whats up
+#!/usr/bin/python
+
+import RPi.GPIO as GPIO
+#import datetime
+import time
+from time import gmtime, strftime
+
+GPIO.setmode(GPIO.BOARD)
+led = 22
+btn=24
+second = 1
+GPIO.setup(led, GPIO.OUT)
+GPIO.setup(btn, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setwarnings(False)
+GPIO.output(led, GPIO.LOW)
+pressed = GPIO.input(btn)
+#print(pressed
